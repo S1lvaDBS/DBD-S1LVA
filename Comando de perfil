@@ -1,0 +1,50 @@
+
+!perfil
+
+$nomention
+<@$authorID>
+$image[$getUserVar[background]]
+$title[Perfil <a:y_awdawdz:769032865768800266>]
+$description[
+<a:X_direitaTKF:770779446960717834> Nome: 
+$username
+
+<a:X_direitaTKF:770779446960717834> Money:
+$getUserVar[nome da variável do seu dinheiro]
+
+<a:X_direitaTKF:770779446960717834> Recado:
+$getUserVar[recado]
+
+
+$image[$getUserVar[background]]
+
+
+]
+
+------------
+
+!recado {novorecado}
+
+Variáveis;
+recado
+Valor: Você não tem nenhum recado.
+
+$nomention
+$argsCheck[>1; <@$authorID>, você precisa colocar um recado!]
+$setUserVar[recado;$message]
+<@$authorID>, seu recado foi mudado para `$message`.
+
+
+----------
+
+!setbackground 
+
+Variáveis
+background
+Valor: (DEIXE O VALOR VAZIO)
+
+$nomention
+$setUserVar[background;$message]
+$argsCheck[>1; :x:  |  <@$authorID>, você deve colocar o link da imagem!]
+$onlyIfMessageContains[$message;https://;:x:  | <@$authorID>, isso não é o link de alguma imagem!]
+<@$authorID>, seu background foi alterado!
