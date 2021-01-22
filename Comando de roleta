@@ -1,0 +1,12 @@
+$nomention
+$onlyIf[$message[1]>=100;:x:  |  <@$authorID>, coloque um valor para a aposta, o valor mínimo é 100 ChomaCoins.]
+$onlyIf[$checkContains[$toLowercase[$message[2]];vermelho;preto]==true;:x:  |  <@$authorID>, você precisa escolher a cor onde a bola irá cair, preto ou vermelho.]
+$onlyIf[$message[1]<=$getUserVar[money];:x:  |  <@$authorID>, você não tem dinheiro suficiente para apostar.]
+$setUserVar[money;$$replaceText[$replaceText[$checkCondition[$message[2]==$randomText[vermelho;preto]];true;sum;-1];false;sub;-1][$getUserVar[money];$message[1]]]
+$title[$replaceText[$replaceText[$checkCondition[$message[2]==$randomText[vermelho;preto]];true;VENCEDOR;1];false;PERDEDOR;1]!]
+$description[> A bola caiu na cor $randomText[vermelho;preto], você $replaceText[$replaceText[$checkCondition[$message[2]==$randomText[vermelho;preto]];true;ganhou;1];false;perdeu;1] $$sum[$replaceText[$replaceText[$checkCondition[$message[2]==$randomText[vermelho;preto]];true; $message[1];1];false;0;1];$message[1]]]<@$authorID>
+$color[$replaceText[$replaceText[$checkCondition[$message[2]==$randomText[vermelho;preto]];true;1bbe00;1];false;eb0000;1]]
+
+$cooldown[5s;<@$authorID>, você deve esperar %time% para apostar novamente.]
+
+TROQUE AS VARIAVEIS PELAS SUAS
