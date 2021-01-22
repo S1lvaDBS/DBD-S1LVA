@@ -1,0 +1,13 @@
+$nomention
+$cooldown[10m; :x:  |   <@$authorID>, você deve esperar 10 minutos! Sua internet caiu!]
+$setUserVar[money;$sum[$getUserVar[money];$random[5;500]]]
+<@$authorID>
+$title[Você enviou um novo vídeo para o YouTube!]
+$description[O público adorou seu vídeo sobre $randomText[comédia;musica;animais;política;desafios]! E você recebeu $random[200;5000] likes e $random[300;40000] views!
+
+Você ganhou $random[5;500] ChomaCoins de anúncios!]
+$footer[]
+$color[33eaf2]
+
+
+TROQUE POR SUAS VARIVEIS
