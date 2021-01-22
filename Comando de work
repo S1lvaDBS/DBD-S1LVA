@@ -1,0 +1,13 @@
+$nomention
+$thumbnail[$authorAvatar]
+$title[Trabalho <a:y_awdawdz:769032865768800266>]
+$description[
+
+> <@$authorID> trabalhou de $randomText[pescador;lixeiro;politico;policial] e recebeu $random[100;4680] chomacoins!]
+
+ 
+$setUserVar[money;$sum[$getUserVar[money];$random[100;4680]]] 
+$cooldown[24h; <a:Ve_eiiGTKF:768872970780147772>  |  <@$authorID>, você já trabalhou hoje, volte novamente daqui 24 horas!]
+$botTyping
+
+TROQUE OS "MONEY POR SUA VARIAVEL!
