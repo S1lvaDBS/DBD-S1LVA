@@ -1,0 +1,44 @@
+
+--------
+
+!ponto iniciar
+
+$nomention
+$title[:lacrosse:  | Iniciando serviço!]
+$description[
+:satellite: **Nome**: $username
+:satellite: **Trabalho**: $getUserVar[trabalho]
+:satellite: **Data**: $date
+]
+
+$deletecommand
+
+--------
+
+!ponto finalizar
+
+$nomention
+$title[:lacrosse:  | Serviço concluido!]
+$description[
+:satellite: **Nome**: $username
+:satellite: **Trabalho**: $getUserVar[trabalho]
+:satellite: **Data**: $date
+]
+
+$deletecommand
+
+--------
+
+!trabalho
+
+
+$nomention
+$argsCheck[>1; <@$authorID>, você precisa colocar um trabalho!]
+$setUserVar[trabalho;$message]
+<@$authorID>, agora você trabalha de $message.
+
+-------
+
+Variáveis;
+trabalho 
+Valor: Desempregado
