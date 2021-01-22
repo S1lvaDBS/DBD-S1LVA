@@ -1,0 +1,15 @@
+$onlyIf[$authorID!=$mentioned[1];]
+$nomention
+$setUserVar[money;$sub[$getUserVar[money;$authorID];$noMentionMessage];$authorID]
+$argsCheck[>2;<a:Ve_eiiGTKF:768872970780147772>    | <@$authorID>, você deve colocar o usuário que deseja realizar a transferência e o valor que deseja transferir.]
+$onlyIf[$getUserVar[money;$authorID]>$noMentionMessage;:x:  |  <@$authorID>, você não tem o valor suficiente de chomacoin's para realizar essa transferência.] 
+$setUserVar[money;$sum[$getUserVar[money;$mentioned[1]];$noMentionMessage];$mentioned[1]]
+$channelSendMessage[$channelID;
+> Pagamento realizado com sucesso!
+<@$authorID> transferiu **$noMentionMessage** ChomaCoins para <@$mentioned[1]>, a confirmação do pagamento já chegou no privado do beneficiado!]
+$title[<a:V_Certo1777:768858024008876033>  |  Transferência realizada!]
+$description[> <@$authorID> transferiu **$noMentionMessage** chomacoin's para você!]
+$botTyping
+$dm[$mentioned[1;no]]
+
+> TROQUE OS "MONEY" POR SUA VARIAVEL!
